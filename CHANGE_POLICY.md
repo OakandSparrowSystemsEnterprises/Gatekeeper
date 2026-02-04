@@ -3,6 +3,7 @@
 GREEN — agent may implement directly
 - Documentation, comments, tests
 - Small bug fixes with clear scope
+- Contract validation scripts (stdlib-only, no network, no mutation, no secrets)
 
 YELLOW — agent may propose via PR, requires review
 - Refactors, performance changes
