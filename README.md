@@ -15,3 +15,6 @@ python3 scripts/validate_contract.py
 ```
 
 Verifies all contract files are present. Exits 0 on success, 1 if any are missing.
+
+License
+Licensed under the Apache License, Version 2.0 — see the LICENSE file for details.
