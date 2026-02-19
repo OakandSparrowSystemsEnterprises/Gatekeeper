@@ -22,3 +22,7 @@ python3 -m unittest discover -s tests  # full test suite
 
 - [ROLLOUT.md](ROLLOUT.md) — production rollout plan, metric definition, save log
 - [TECHNICAL_BRIEF.md](TECHNICAL_BRIEF.md) — architecture, enforcement table, enterprise artifact
+
+## License
+
+Licensed under the Apache License, Version 2.0 — see the [LICENSE](LICENSE) file for details.
