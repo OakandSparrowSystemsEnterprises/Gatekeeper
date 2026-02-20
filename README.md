@@ -11,10 +11,18 @@ A lightweight authority contract for AI-assisted code changes. Defines context, 
 ## Validation
 
 ```bash
-python3 scripts/validate_contract.py
+python3 scripts/validate_contract.py   # contract files present
+python3 scripts/validate_pr.py <file>  # PR body fields complete
+python3 -m unittest discover -s tests  # full test suite
 ```
 
-Verifies all contract files are present. Exits 0 on success, 1 if any are missing.
+`validate_contract.py` checks that all contract files exist. `validate_pr.py` checks that a PR body declares a risk level, fills required sections, and — for RED changes — includes a named approver and approval evidence. Both run as required CI status checks on every pull request, including those from automation and AI agents.
 
-License
-Licensed under the Apache License, Version 2.0 — see the LICENSE file for details.
+## Deployment
+
+- [ROLLOUT.md](ROLLOUT.md) — production rollout plan, metric definition, save log
+- [TECHNICAL_BRIEF.md](TECHNICAL_BRIEF.md) — architecture, enforcement table, enterprise artifact
+
+## License
+
+Licensed under the Apache License, Version 2.0 — see the [LICENSE](LICENSE) file for details.

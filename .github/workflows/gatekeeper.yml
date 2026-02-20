@@ -1,0 +1,22 @@
+name: Gatekeeper Enforcement
+
+on:
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  gatekeeper:
+    name: gatekeeper
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate contract files
+        run: python3 scripts/validate_contract.py
+
+      - name: Validate PR body
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          printf '%s' "$PR_BODY" > /tmp/pr_body.txt
+          python3 scripts/validate_pr.py /tmp/pr_body.txt
