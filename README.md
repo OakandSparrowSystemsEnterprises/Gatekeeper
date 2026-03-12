@@ -1,3 +1,5 @@
+Since Conception and in Continuous use. Copyright and IP protected Oak and Sparrow Systems Enterprise LLC
+
 # Gatekeeper
 
 A lightweight authority contract for AI-assisted code changes. Defines context, invariants, and approval boundaries so agents don't guess.
